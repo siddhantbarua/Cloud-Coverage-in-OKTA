@@ -15,7 +15,7 @@ Okta is a standard unit of measurement for cloud cover for meteorological purpos
 ### SWINySEG
 For training the network, the SWINySEG (http://vintage.winklerbros.net/Publications/grsl2019.pdf) dataset was used. This dataset has 6768 day and night time images of sky/cloud patches and their corresponding binary segmentation maps. The dataset is available for download at: http://vintage.winklerbros.net/swinyseg.html
 
-                      ![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
+![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
 
 
 
