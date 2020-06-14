@@ -6,7 +6,7 @@ Cloud coverage in an area is an important measurement for meteorological observa
 ### UNET
 UNET is a neural network architecture, first designed for use on biomedical images. It focus on image classification, where the input is an image and the output is a segmentation map of the image, into different classes. The original UNET paper can be found here: https://arxiv.org/pdf/1505.04597.pdf
 The UNET architecture as shown below, has a contracting path, and an expanding path, giving it the appearence of a “U”.
-
+![alt text](https://miro.medium.com/max/2824/1*f7YOaE4TWubwaFF7Z1fzNw.png)
 
 
 ### OKTA
