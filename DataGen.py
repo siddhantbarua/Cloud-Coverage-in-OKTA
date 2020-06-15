@@ -8,6 +8,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
+# Define image size
+image_size = 128
 
 # DataGen class to initialise batch and get batches of images and ground truths
 class DataGen(keras.utils.Sequence):
