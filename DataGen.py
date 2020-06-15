@@ -1,3 +1,5 @@
+## Data generator for the UNET model
+
 import os
 
 import cv2
@@ -7,7 +9,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 
-# To read from dataset
+# DataGen class to initialise batch and get batches of images and ground truths
 class DataGen(keras.utils.Sequence):
 
     def __init__(self, ids, path, batch_size=8, image_size=128):
