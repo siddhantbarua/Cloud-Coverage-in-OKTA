@@ -3,7 +3,7 @@
 import os
 
 import cv2
-import numpy
+import numpy as np
 
 import tensorflow as tf
 from tensorflow import keras
