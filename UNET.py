@@ -1,6 +1,6 @@
 ## Defining the UNET architecture 
 
-import layers
+from layers import *
 from tensorflow import keras
 
 def UNet():
