@@ -8,7 +8,6 @@ import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 
-
 # DataGen class to initialise batch and get batches of images and ground truths
 class DataGen(keras.utils.Sequence):
 
