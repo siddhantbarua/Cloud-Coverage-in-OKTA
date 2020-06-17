@@ -78,8 +78,8 @@ num_epochs =  5
 model.fit(train_gen, validation_data=valid_gen, steps_per_epoch=train_steps, validation_steps=valid_steps, 
                     epochs=num_epochs)
 
-# To save weights. Make sure there is a weights directory in the same directory as the program.
-# model.save_weights("weights/"+str(learning_rate)+str(batch_size)+str(input_dropout_rate)+str(dropout_rate)+".h5")
+# To save weights. Make sure there is a Weights/ subdirectory in the same directory as the program.
+# model.save_weights("Weights/"+str(learning_rate)+str(batch_size)+str(input_dropout_rate)+str(dropout_rate)+".h5")
 
 # Test your predictions
 x, y = valid_gen.__getitem__(2)
