@@ -1,6 +1,5 @@
 ## Defining the UNET architecture 
 
-from DataGen import *
 from layers import *
 from tensorflow import keras
 
