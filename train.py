@@ -9,7 +9,7 @@ import UNET
 
 # Setting up parameters
 image_size = 128
-batch_size = 16
+batch_size = 8 
 val_data_size = 600
 
 # Dropout parameters for regularization
@@ -51,12 +51,14 @@ def test_load():
     ax = fig.add_subplot(1, 2, 1)
     fig.suptitle("Test load")
     ax.imshow(x[r])
+    ax.set_title("Image")
     ax = fig.add_subplot(1, 2, 2)
     ax.imshow(np.reshape(y[r], (image_size, image_size)), cmap="gray")
+    ax.set_title("Ground Truth")
     plt.show()
 
 # To test if images have loaded correctly
-# test_load()
+test_load()
 
 # Learning rate for adam
 learning_rate = "0.0005"
@@ -73,13 +75,13 @@ train_steps = len(train_ids)//batch_size
 valid_steps = len(valid_ids)//batch_size
 
 # Number of epochs
-num_epochs =  1 
+num_epochs = 200 
 
 model.fit(train_gen, validation_data=valid_gen, steps_per_epoch=train_steps, validation_steps=valid_steps, 
                     epochs=num_epochs)
 
-# To save weights. Make sure there is a weights directory in the same directory as the program.
-# model.save_weights("weights/"+str(learning_rate)+str(batch_size)+str(input_dropout_rate)+str(dropout_rate)+".h5")
+# To save weights. Make sure there is a Weights/ directory in the same directory as the program.
+model.save_weights(current_dir+"/Weights/"+str(learning_rate)+str(batch_size)+str(input_dropout_rate)+str(dropout_rate)+".h5")
 
 # Test your predictions
 x, y = valid_gen.__getitem__(2)
@@ -89,8 +91,11 @@ result = result > 0.5
 
 fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
 fig.suptitle("Testing predictions")
-
+# Plot image, ground truth and prediction
 ax1.imshow(np.reshape(x[0], (image_size, image_size, 3)))
+ax1.set_title("Original image")
 ax2.imshow(np.reshape(y[0], (image_size, image_size)), cmap="gray")
+ax2.set_title("Ground truth")
 ax3.imshow(np.reshape(result[0], (image_size, image_size)), cmap="gray")
+ax3.set_title("Prediction")
 plt.show()
