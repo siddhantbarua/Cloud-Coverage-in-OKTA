@@ -9,7 +9,7 @@ import UNET
 
 # Setting up parameters
 image_size = 128
-batch_size = 8
+batch_size = 16
 val_data_size = 600
 
 # Dropout parameters for regularization
@@ -59,7 +59,7 @@ def test_load():
 # test_load()
 
 # Learning rate for adam
-learning_rate = "0.001"
+learning_rate = "0.0005"
 
 opt = keras.optimizers.Adam(learning_rate=float(learning_rate))
 model.compile(optimizer=opt, loss="binary_crossentropy", metrics=["acc"])
@@ -73,7 +73,7 @@ train_steps = len(train_ids)//batch_size
 valid_steps = len(valid_ids)//batch_size
 
 # Number of epochs
-num_epochs =  5 
+num_epochs =  1 
 
 model.fit(train_gen, validation_data=valid_gen, steps_per_epoch=train_steps, validation_steps=valid_steps, 
                     epochs=num_epochs)
@@ -87,10 +87,10 @@ result = model.predict(x)
 
 result = result > 0.5
 
-fig, (ax1, ax2, ax3) = plt.subplot(1, 3)
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3)
 fig.suptitle("Testing predictions")
 
-ax1.imshow(np.reshape(x[0], (image_size, image_sizem, 3)))
+ax1.imshow(np.reshape(x[0], (image_size, image_size, 3)))
 ax2.imshow(np.reshape(y[0], (image_size, image_size)), cmap="gray")
 ax3.imshow(np.reshape(result[0], (image_size, image_size)), cmap="gray")
-
+plt.show()
