@@ -18,7 +18,6 @@ For training the network, the SWINySEG (http://vintage.winklerbros.net/Publicati
 ![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
 
 
-The code for this project can also be run in Google Colabotary: 
 
 
 
