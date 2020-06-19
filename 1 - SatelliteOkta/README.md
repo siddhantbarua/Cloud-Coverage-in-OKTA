@@ -15,3 +15,9 @@ The variable cent stores the cloud cover in percentage and okta variable gives i
 The input to the function can be a city or a coordinates, which follows the convention as North and East coordinates are positive and so on.
 
 When city is provided as input it uses the cities.csv file to find out its coordinates and use it to map the city on the image.
+
+```matlab 
+[cent, okta]=getOktaHis('City');
+[cent, okta]=getOktaHis('Latitude','Longitude');
+```
+The given function can provide you with the graph of cloud cover for the past 6 hours, the variables cent and okta returns a vector of cloud cover values in half an hour intervals.
