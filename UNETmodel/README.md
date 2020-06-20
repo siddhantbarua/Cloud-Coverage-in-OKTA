@@ -13,6 +13,8 @@ For training the network, the SWINySEG (http://vintage.winklerbros.net/Publicati
 
 ![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
 
+This project can also be tried on Google colab: https://colab.research.google.com/drive/1Wl5gOlZiABUomLTcF-H9wKFymGTRAMZm?authuser=1#scrollTo=xo2vbMchraQ-
+
 
 
 
