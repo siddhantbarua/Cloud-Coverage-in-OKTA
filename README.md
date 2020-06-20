@@ -7,8 +7,11 @@ This project was done under the guidance of the Indian Metereological Department
 ### OKTA
 Okta is a standard unit of measurement for cloud cover for meteorological purposes. It is an integer value ranging from 0 to 8, where a 0 okta coverage denotes clear skies, and a 8 okta coverage denotes completely cloudy sky.
 
-1. SatelliteOKTA: This program calculates the cloud coverage over any city in India using satellite IR image data provided by the Indian meteorological department website: (https://mausam.imd.gov.in/imd_latest/contents/satellite.php)
-2. Ground
+The project includes the following implementations:
+1. From Satellite images: This program calculates the cloud coverage over any city in India using satellite IR image data provided by the Indian meteorological department website: (https://mausam.imd.gov.in/imd_latest/contents/satellite.php) This is done using thresholding operations.
+2. From ground images using Fixed Thresholding: This program uses visible light images and uses simple thresholding operations to classify cloud and sky pixels. 
+3. 
+4. UNET deep learning model: This program uses a UNET neural network architecture to perform semantic segmentation on visible light images of the sky. 
 
 
 
