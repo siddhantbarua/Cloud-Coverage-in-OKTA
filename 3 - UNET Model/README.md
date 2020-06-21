@@ -11,7 +11,7 @@ The UNET architecture as shown below, has a contracting path, and an expanding p
 ![alt text](https://miro.medium.com/max/2824/1*f7YOaE4TWubwaFF7Z1fzNw.png)
 
 ### SWINySEG
-For training the network, the SWINySEG (http://vintage.winklerbros.net/Publications/grsl2019.pdf) dataset was used. This dataset has 6768 day and night time images of sky/cloud patches and their corresponding binary segmentation maps. The dataset is available for download at: http://vintage.winklerbros.net/swinyseg.html
+For training the network, the SWINySEG (http://vintage.winklerbros.net/Publications/grsl2019.pdf) dataset was used. This dataset has 6768 day and night time images of sky/cloud patches and their corresponding binary segmentation maps. The zipped file of the SWINySEG dataset is included in the "Cloud-Coverage-in-OKTA/Datasets/" directory. The password for unzipping the same can be found at: http://vintage.winklerbros.net/swinyseg.html
 
 ![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
 
