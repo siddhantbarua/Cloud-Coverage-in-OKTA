@@ -1,7 +1,7 @@
 ﻿# Cloud-Coverage-in-OKTA
 A UNET model for performing semantic segmentation on images of the sky, to detect cloud coverage in an area.
 
-(This project can also be tried on Google colab: https://colab.research.google.com/drive/1Wl5gOlZiABUomLTcF-H9wKFymGTRAMZm?authuser=1#scrollTo=xo2vbMchraQ-)
+(This project can also be tried on Google colab: https://colab.research.google.com/drive/1Wl5gOlZiABUomLTcF-H9wKFymGTRAMZm#scrollTo=3mDG9YsrC2aC&forceEdit=true&sandboxMode=true)
 
 his project trains a deep neural network to perform semantic segmentation on images of the sky. The output of the network is a binary segmentation map of the picture, classifying cloud and "non-cloud" pixels. The architecure used is the UNET model. 	
 
