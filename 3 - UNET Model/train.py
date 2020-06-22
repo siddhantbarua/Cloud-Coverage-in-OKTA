@@ -17,8 +17,9 @@ input_dropout_rate = 0.25
 dropout_rate = 0.5
 
 current_dir = os.getcwd()
+parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
 # Training path having images and ground truths in different directories "images" and "GTmaps" 
-train_path = current_dir + "/Datasets/SWINySEG/"
+train_path = parent_dir + "/Datasets/SWINySEG/"
 
 # Get image, GT ids. SWINySEG has .jpg images and .png GTs. To refer to a pair with same id, removing file extensions
 lst = os.listdir(train_path+"images/")
