@@ -15,6 +15,12 @@ For training the network, the SWINySEG (http://vintage.winklerbros.net/Publicati
 
 ![alt test](http://vintage.winklerbros.net/Images/swinyseg.jpg)
 
+### Usage
+To use this program,
+1. Download all the source files, by cloning this repository.
+2. To train the network, unzip the SWINySEG dataset, the zip to which is given in the Cloud-Coverage-in-OKTA/Datasets/    directory. The password can be found at: http://vintage.winklerbros.net/swinyseg.html Then run the program **train.py**. The parameters for the network can be changed in the source code.
+3. To use the model for predictions, place the cloud images in the Test/ directory, and run the **GetOkta.py** program.
+
 
 
 
