@@ -3,7 +3,7 @@ This project provides the cloud cover in percentage and okta unit from the image
 It contains the scripts to train and check the performance of the network created. It also has a pretrained model to perform semantic segmentation.
 
 ## Installation
-To run this script, one needs to have MATLAB installed on the computer, along with a licence to run MATLAB. Image Processing Toolbox is also required to run this script.
+To run this script, one needs to have MATLAB installed on the computer, along with a licence to run MATLAB. Image Processing Toolbox and Deep Learning Toolbox is also required to run this script.
 Make sure to provide the correct directory location of the dataset folder while training.
 
 ## Usage
