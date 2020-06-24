@@ -2,7 +2,7 @@
 
 from tensorflow import keras
 
-# Convolution layer for downsampling
+# Contracting block for downsampling
 def down_block(x, filters, dropout_rate, kernel_size=(3, 3), padding="same", strides=1):
     conv = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(x)
     conv = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(conv)
@@ -11,7 +11,7 @@ def down_block(x, filters, dropout_rate, kernel_size=(3, 3), padding="same", str
 
     return conv, pool
 
-# Convolutional layer for upsampling
+# Expanding block for upsampling
 def up_block(x, skip, filters, dropout_rate, kernel_size=(3, 3), padding="same", strides=1):
     us = keras.layers.UpSampling2D((2, 2))(x)
     concat = keras.layers.Concatenate()([us, skip])
@@ -21,7 +21,7 @@ def up_block(x, skip, filters, dropout_rate, kernel_size=(3, 3), padding="same",
 
     return conv
 
-# Bottlenecking
+# Bottlenecking layer
 def bottleneck(x, filters, kernel_size=(3, 3), padding="same", strides=1):
     conv = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(x)
     conv = keras.layers.Conv2D(filters, kernel_size, padding=padding, strides=strides, activation="relu")(conv)
